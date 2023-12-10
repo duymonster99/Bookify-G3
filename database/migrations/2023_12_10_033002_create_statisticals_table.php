@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('order_date');
             $table->string('sales');
             $table->string('profit');
-            $table->int('quantity');
-            $table->int('total_order');
+            $table->unsignedBigInteger('quantity');
+            $table->unsignedBigInteger('total_order');
         });
     }
 

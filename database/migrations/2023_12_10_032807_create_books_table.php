@@ -12,8 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('books', function (Blueprint $table) {
-            Schema::create('books', function (Blueprint $table) {
-                $table->id();
+            $table->id();
                 $table->string('book_name')->unique();
                 $table->unsignedBigInteger('category_id');
                 $table->unsignedBigInteger('author_id');
@@ -31,7 +30,6 @@ return new class extends Migration
                 $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
                 $table->foreign('author_id')->references('id')->on('authors')->onDelete('cascade');
                 $table->foreign('publisher_id')->references('id')->on('publishers')->onDelete('cascade');
-            });
         });
     }
 
