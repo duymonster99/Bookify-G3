@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger("user_id");
+            $table->unsignedBigInteger("payment_id");
+            $table->decimal("order_total",10,2);
+            $table->string("order_status");
             $table->timestamps();
+
+            $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade");
+            $table->foreign("payment_id")->references("id")->on("payments")->onDelete("cascade");
         });
     }
 

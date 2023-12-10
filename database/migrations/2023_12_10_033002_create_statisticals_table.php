@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('statisticals', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('order_date');
+            $table->string('sales');
+            $table->string('profit');
+            $table->int('quantity');
+            $table->int('total_order');
         });
     }
 
