@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Coupon extends Model
 {
+    protected $fillable = ["coupon_code", "coupon_number", "coupon_condition"];
     use HasFactory;
 }

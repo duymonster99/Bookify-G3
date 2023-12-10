@@ -1,0 +1,20 @@
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; /* Adjust the border-radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+
+  /* 3D effect on hover */
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover {
+  transform: scale(1.05); /* Adjust the scale factor for the desired zoom effect on hover */
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  border-radius: inherit; /* Inherit the border-radius from the parent container */
+}
+
